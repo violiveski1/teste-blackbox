@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pontos de Descarte - São Borja RS</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header (mesmo do index) -->
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <i class="fas fa-recycle"></i>
+                    <span>Descarte Consciente</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="mapa.html" class="nav-link active">Pontos de Descarte</a></li>
+                    <li><a href="noticias.html" class="nav-link">Notícias</a></li>
+                    <li><a href="estatisticas.html" class="nav-link">Estatísticas</a></li>
+                    <li><a href="sobre.html" class="nav-link">Sobre</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="map-container">
+        <div id="map" style="height: 70vh;"></div>
+        <div class="map-legend">
+            <h3><i class="fas fa-info-circle"></i> Pontos de Coleta em São Borja</h3>
+            <ul>
+                <li><i class="fas fa-map-marker-alt" style="color: #ff6b6b;"></i> Secretaria de Meio Ambiente</li>
+                <li><i class="fas fa-map-marker-alt" style="color: #4ecdc4;"></i> Parque General Vargas</li>
+                <li><i class="fas fa-map-marker-alt" style="color: #45b7d1;"></i> Ecoponto Central</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p><i class="fas fa-heart"></i> Projeto comunitário – São Borja RS | Educação ambiental</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="js/mapa.js"></script>
+</body>
+</html>
