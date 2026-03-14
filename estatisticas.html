@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estatísticas - Descarte Consciente São Borja</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <i class="fas fa-recycle"></i>
+                    <span>Descarte Consciente</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="mapa.html" class="nav-link">Pontos de Descarte</a></li>
+                    <li><a href="noticias.html" class="nav-link">Notícias</a></li>
+                    <li><a href="estatisticas.html" class="nav-link active">Estatísticas</a></li>
+                    <li><a href="sobre.html" class="nav-link">Sobre</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="stats-hero">
+        <div class="container">
+            <h1><i class="fas fa-chart-bar"></i> Estatísticas do Lixo Eletrônico</h1>
+            <p class="stats-subtitle">Dados alarmantes que mostram a importância do descarte correto</p>
+        </div>
+    </section>
+
+    <section class="container">
+        <!-- Gráfico 1: Reciclagem Brasil -->
+        <div class="chart-container">
+            <h2>🗑️ Reciclagem no Brasil</h2>
+            <p>Apenas <strong>3%</strong> do lixo eletrônico é reciclado corretamente</p>
+            <canvas id="reciclagemChart"></canvas>
+        </div>
+
+        <!-- Gráfico 2: Produção Mundial -->
+        <div class="chart-container">
+            <h2>🌍 Produção Mundial</h2>
+            <canvas id="producaoChart"></canvas>
+        </div>
+
+        <!-- Stats Cards -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number">62M</div>
+                <div class="stat-label">Toneladas geradas no mundo (2022)</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">2,4M</div>
+                <div class="stat-label">Toneladas no Brasil por ano</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">3%</div>
+                <div class="stat-label">Taxa de reciclagem no Brasil</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">85,6%</div>
+                <div class="stat-label">Brasileiros com eletrônicos parados em casa</div>
+            </div>
+        </div>
+
+        <!-- Impacto Ambiental -->
+        <div class="impact-section">
+            <h2>☣️ Impacto Ambiental</h2>
+            <div class="grid-2">
+                <div class="card">
+                    <i class="fas fa-flask icon-large danger"></i>
+                    <h3>Substâncias Tóxicas</h3>
+                    <ul>
+                        <li>⚠️ Chumbo</li>
+                        <li>⚠️ Mercúrio</li>
+                        <li>⚠️ Cádmio</li>
+                    </ul>
+                    <p>Contaminam solo, água e afetam a saúde humana</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-recycle icon-large success"></i>
+                    <h3>Materiais Recuperáveis</h3>
+                    <ul>
+                        <li>🔌 Cobre</li>
+                        <li>♻️ Plástico</li>
+                        <li>⚙️ Alumínio</li>
+                    </ul>
+                    <p>Podem ser reaproveitados na economia circular</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p><i class="fas fa-heart"></i> Projeto comunitário – São Borja RS | Educação ambiental</p>
+            <p>Fonte: Dados 2022-2024 | Descarte Consciente</p>
+        </div>
+    </footer>
+
+    <script src="js/graficos.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
