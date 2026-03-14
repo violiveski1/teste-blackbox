@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notícias - Descarte Consciente São Borja</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <i class="fas fa-recycle"></i>
+                    <span>Descarte Consciente</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="mapa.html" class="nav-link">Pontos de Descarte</a></li>
+                    <li><a href="noticias.html" class="nav-link active">Notícias</a></li>
+                    <li><a href="estatisticas.html" class="nav-link">Estatísticas</a></li>
+                    <li><a href="sobre.html" class="nav-link">Sobre</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Search Bar -->
+    <section class="search-section">
+        <div class="container">
+            <div class="search-container">
+                <i class="fas fa-search"></i>
+                <input type="text" id="searchInput" placeholder="Pesquisar notícias...">
+                <button onclick="searchNews()">Buscar</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <h1><i class="fas fa-newspaper"></i> Notícias Recentes</h1>
+        
+        <div id="newsContainer">
+            <!-- Notícias serão carregadas via JS -->
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p><i class="fas fa-heart"></i> Projeto comunitário – São Borja RS | Educação ambiental</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Dados das notícias
+        const noticias = [
+            {
+                titulo: "Campanha de coleta de lixo eletrônico mobiliza São Borja",
+                data: "15/11/2024",
+                imagem: "https://images.unsplash.com/photo-1558618047-3c8c76bbb17e?w=400",
+                resumo: "A Secretaria de Meio Ambiente organizou coleta especial no Parque General Vargas. Mais de 500kg de equipamentos foram recolhidos.",
+                link: "#"
+            },
+            {
+                titulo: "Prefeitura inaugura novo ecoponto no centro",
+                data: "10/11/2024",
+                imagem: "https://images.unsplash.com/photo-1578916171728-46686eac8d58?w=400",
+                resumo: "Novo ponto de coleta fica na Av. Tupy Caldas. Aceita celulares, computadores e pilhas de seg a sex, das 8h às 17h.",
+                link: "#"
+            },
+            {
+                titulo: "Escolas participam de mutirão de reciclagem",
+                data: "05/11/2024",
+                imagem: "https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=400",
+                resumo: "Alunos do Colégio Estadual Sepé Tiaraju recolheram 200kg de lixo eletrônico em ação educativa.",
+                link: "#"
+            },
+            {
+                titulo: "Dia do Meio Ambiente terá coleta especial",
+                data: "01/11/2024",
+                imagem: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400",
+                resumo: "No dia 05/06, coleta itinerante passará por todos os bairros. Participe!",
+                link: "#"
+            }
+        ];
+
+        function loadNews(filter = '') {
+            const container = document.getElementById('newsContainer');
+            container.innerHTML = '';
+
+            noticias
+                .filter(noticia => 
+                    noticia.titulo.toLowerCase().includes(filter.toLowerCase()) ||
+                    noticia.resumo.toLowerCase().includes(filter.toLowerCase())
+                )
+                .forEach(noticia => {
+                    const newsCard = `
+                        <article class="news-card">
+                            <img src="${noticia.imagem}" alt="${noticia.titulo}" loading="lazy">
+                            <div class="news-content">
+                                <span class="news-date">${noticia.data}</span>
+                                <h3>${noticia.titulo}</h3>
+                                <p>${noticia.resumo}</p>
+                                <a href="${noticia.link}" class="read-more">Leia mais <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </article>
+                    `;
+                    container.innerHTML += newsCard;
+                });
+        }
+
+        function searchNews() {
+            const query = document.getElementById('searchInput').value;
+            loadNews(query);
+        }
+
+        // Carregar notícias iniciais
+        loadNews();
+    </script>
+</body>
+</html>
