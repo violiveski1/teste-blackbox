@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descarte Consciente - São Borja RS</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <i class="fas fa-recycle"></i>
+                    <span>Descarte Consciente</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link active">Home</a></li>
+                    <li><a href="mapa.html" class="nav-link">Pontos de Descarte</a></li>
+                    <li><a href="noticias.html" class="nav-link">Notícias</a></li>
+                    <li><a href="estatisticas.html" class="nav-link">Estatísticas</a></li>
+                    <li><a href="sobre.html" class="nav-link">Sobre</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Descarte Consciente<br><span>Lixo Eletrônico em São Borja</span></h1>
+            <p>Aprenda como descartar corretamente seus equipamentos eletrônicos e proteja o meio ambiente da nossa cidade!</p>
+            <div class="hero-buttons">
+                <a href="mapa.html" class="btn btn-primary">
+                    <i class="fas fa-map-marker-alt"></i> Ver Pontos de Coleta
+                </a>
+                <a href="estatisticas.html" class="btn btn-secondary">
+                    <i class="fas fa-chart-bar"></i> Ver Estatísticas
+                </a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1558618047-3c8c76bbb17e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Reciclagem">
+        </div>
+    </section>
+
+    <!-- O que é Lixo Eletrônico -->
+    <section class="container">
+        <h2>O que é Lixo Eletrônico?</h2>
+        <div class="grid-2">
+            <div class="card">
+                <i class="fas fa-mobile-alt icon-large"></i>
+                <h3>Exemplos</h3>
+                <ul>
+                    <li>📱 Celulares e tablets</li>
+                    <li>💻 Computadores e notebooks</li>
+                    <li>📺 TVs e monitores</li>
+                    <li>🔌 Carregadores e cabos</li>
+                    <li>🔋 Pilhas e baterias</li>
+                    <li>🏠 Eletrodomésticos</li>
+                </ul>
+            </div>
+            <div class="card danger">
+                <i class="fas fa-exclamation-triangle icon-large"></i>
+                <h3>Por que NÃO jogar no lixo comum?</h3>
+                <ul>
+                    <li>Contamina solo e água</li>
+                    <li>Metais pesados: chumbo, mercúrio</li>
+                    <li>Poluição por 1000+ anos</li>
+                    <li>Perda de materiais valiosos</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Como Descartar -->
+    <section class="container how-to">
+        <h2>Como Descartar Corretamente</h2>
+        <div class="steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>Separe o lixo eletrônico</h3>
+                <p>Identifique aparelhos que não usa mais</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>Encontre o ponto mais próximo</h3>
+                <p>Use nosso <a href="mapa.html">mapa interativo</a></p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>Leve até o local</h3>
+                <p>Respeite os horários de funcionamento</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p><i class="fas fa-heart"></i> Projeto comunitário – São Borja RS | Educação ambiental</p>
+            <p>Feito com ❤️ para nossa cidade</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
